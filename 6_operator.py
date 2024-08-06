@@ -1,0 +1,1 @@
+q)give example of each operator
