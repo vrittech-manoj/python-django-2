@@ -6,3 +6,11 @@
 # third-step: ask second number from user
 # fourth-step: perform operation based on operator
 
+if operator == '+'
+    add 
+elif operator == '-':
+    perform operation.
+
+#WAP to find input number is prime or composite.
+
+tkinter pyp
