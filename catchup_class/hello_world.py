@@ -1,7 +1,1 @@
-#python
-
-
-git status
-git add .
-git commit -m "update"
-git push
+print("hello this is skill sikshya ")
