@@ -18,6 +18,7 @@ for student in range(0,3):
         subject_mark[subject] = mark
         obtain_mark = obtain_mark + int(mark)
     percentage = (obtain_mark/500)*100
+    percentage = percentage
     if percentage < 30:
         division = "fail"
     elif percentage>=30 and percentage<45:
@@ -33,3 +34,6 @@ for student in range(0,3):
 print("**********************total studen data***********************")
 print(total_student_list)
 # [{'student_name':"ram",'nepali':66,'english':43},{'student_name':"hari",'nepali':66,'english':43}]
+
+
+
