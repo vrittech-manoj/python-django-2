@@ -20,6 +20,8 @@ elif operator == '-':
 elif operator == '*':
     multiply(first_number,second_number)
 
+#WAP to find give value is odd or even , must include function # assignment
+
     
 
 
