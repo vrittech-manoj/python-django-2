@@ -6,7 +6,14 @@
 
 student_data = []
 
-while True:
+def register_user():
+    name = input("enter name:")
+    age = input("enter age:")
+    roll = input("enter roll:")
+    student = {"name": name, "age": age, "roll": roll}
+    student_data.append(student)
+
+def menus():
     print("************WELCOME*************************")
     print("select 1 for register new student")
     print("select 2 for display all students")
@@ -15,14 +22,14 @@ while True:
     print("""select 5 for register delete student \n
     do you want to exit ? Y/N""")
 
+while True:
+    
+    menus()
+    
     input_option =  input("#>>>...")
 
     if input_option == "1":
-        name = input("enter name:")
-        age = input("enter age:")
-        roll = input("enter roll:")
-        student = {"name": name, "age": age, "roll": roll}
-        student_data.append(student)
+        register_user()
     
     if input_option == "2":
         for student in student_data:
