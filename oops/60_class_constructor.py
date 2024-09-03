@@ -8,7 +8,7 @@ class Employee:
       
     def bonus(self):
         #bonus with price
-        bonus = 0.5 #percentage
+        bonus = 200
         self.bonus_s = bonus 
         print(f"bonus is added to {self.name}",self.bonus_s)
 
@@ -26,13 +26,26 @@ class Employee:
 
 
 
-
 staff_data = [{"name":"umesh","salary":40000},{"name":"pradeep","salary":60200},{"name":"sagar","salary":19500}]
 
-# staff_data = [{"name":"umesh","salary":40000,'bonus':34,'tax':12,'total_salary':40022},{"name":"pradeep","salary":60200...},{"name":"sagar","salary":19500....}]
+for data in staff_data:
+    user_name = data['name']
+    user_salary = data['salary']
 
+    
+    obj = Employee(user_name,user_salary)
+    obj.total_salary()
+    data['bonus'] = obj.bonus_s
+    data['tax'] = obj.tax_with_salary
+    data['total_salary'] = obj.total_salary
+
+
+
+
+    
+
+print("\n\n\n")
 print(staff_data)
-
 
 
 
