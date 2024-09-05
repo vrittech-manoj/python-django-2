@@ -58,5 +58,14 @@ class Tesla(Battery,ObjectDetect):
 tesla_obj = Tesla()
 tesla_obj.move()
 
+#condition
+#loop
+#list,dictionary
+#function 
+
+#class,inheritance
+
+
+
   
 
