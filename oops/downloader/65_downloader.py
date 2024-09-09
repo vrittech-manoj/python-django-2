@@ -1,4 +1,33 @@
-url1 =  "https://images.pexels.com/photos/813011/pexels-photo-813011.jpeg"
-url2 = "https://images.pexels.com/photos/945177/pexels-photo-945177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-url3  = "https://images.pexels.com/photos/27694923/pexels-photo-27694923/free-photo-of-an-elephant-walking-through-a-grassy-field.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-url4 = "https://images.pexels.com/photos/28203063/pexels-photo-28203063/free-photo-of-a-person-is-standing-on-the-edge-of-the-water.jpeg?"
+import requests
+from datetime import datetime
+
+image_data = [
+              "https://cnex.com.np/images/Pioneering-Female-Img7.png",
+              "https://cnex.com.np/images/Our-Story.png",
+              "https://cnex.com.np/images/Our-Story.png",
+              "https://cnex.com.np/images/Pioneering-Female-Img7.png",
+              "https://cnex.com.np/images/disk-image-rotate.png",
+            ]
+
+
+t1 = datetime.now()
+print("****************with threading********************")
+
+
+i = 0
+for image_url in image_data:
+    print("downloading ",image_url)
+    i = i+1
+    data  = requests.get(image_url)
+    # #save this image
+    with open(f"{i}.png", "wb") as f:
+        f.write(data.content)
+
+t2 = datetime.now()
+
+# Calculate execution time
+execution_time = t2 - t1
+
+total_seconds = execution_time.total_seconds()
+print(f"Execution time: {total_seconds} seconds")
+
