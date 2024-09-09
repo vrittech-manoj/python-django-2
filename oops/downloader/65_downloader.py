@@ -1,6 +1,12 @@
 import requests
 from datetime import datetime
 
+def download(image_url):
+    data  = requests.get(image_url)
+    # #save this image
+    with open(f"{i}.png", "wb") as f:
+        f.write(data.content)
+
 image_data = [
               "https://cnex.com.np/images/Pioneering-Female-Img7.png",
               "https://cnex.com.np/images/Our-Story.png",
@@ -18,10 +24,9 @@ i = 0
 for image_url in image_data:
     print("downloading ",image_url)
     i = i+1
-    data  = requests.get(image_url)
-    # #save this image
-    with open(f"{i}.png", "wb") as f:
-        f.write(data.content)
+
+    download(image_url)
+
 
 t2 = datetime.now()
 
