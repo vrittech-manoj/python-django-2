@@ -1,7 +1,8 @@
 import requests
 from datetime import datetime
+import threading
 
-def download(image_url):
+def download(image_url,i):
     data  = requests.get(image_url)
     # #save this image
     with open(f"{i}.png", "wb") as f:
@@ -21,11 +22,17 @@ print("****************with threading********************")
 
 
 i = 0
-for image_url in image_data:
-    print("downloading ",image_url)
-    i = i+1
 
-    download(image_url)
+thread_lst = []
+for image_url in image_data:
+    i = i+1
+    thread_1 = threading.Thread(target=download,args=[image_url,i])
+    thread_1.start()
+    thread_lst.append(thread_1)
+
+
+for task in thread_lst:
+    task.join()
 
 
 t2 = datetime.now()
