@@ -14,6 +14,8 @@ def task3():
     print("Task 3 started")
     time.sleep(2)
 
+
+
 t1 = datetime.now()
 
 print("****************without threading********************")

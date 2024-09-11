@@ -27,6 +27,10 @@ task_1.start()
 task_2.start()
 task_3.start()
 
+task_1.join()
+task_2.join()
+task_3.join()
+
 
 t2 = datetime.now()
 
