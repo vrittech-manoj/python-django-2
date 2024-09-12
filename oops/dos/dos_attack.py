@@ -1,8 +1,8 @@
 import requests
 import threading
 
-url = "http://13.237.94.113:8007/api/"
-thread_number = 20
+url = "http://13.237.94.113:8009/"
+thread_number = 2000
 
 def task(person):
     i=0
