@@ -30,5 +30,5 @@ class Shape(ABC):
         return l*b 
     
     @abstractmethod
-    def square(self,l):
+    def area_of_square(self,l):
         print("i don't now , please  you must do it.")
