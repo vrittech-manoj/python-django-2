@@ -1,5 +1,5 @@
 """
-URL configuration for mainapp project.
+URL configuration for eshop project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -17,11 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('product/',include('product.urls')),
-    path('', views.index),
-    path('about/', views.about),
-]
+    path('',views.index,name="home"),
+    path('product/', include("product.urls")),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
