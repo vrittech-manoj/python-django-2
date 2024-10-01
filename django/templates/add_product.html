@@ -1,0 +1,26 @@
+<html>
+  <body>
+
+
+   <form method="post" action="{% url 'store_product' %}" enctype="multipart/form-data"> 
+        {% csrf_token %}
+ 
+      <select name="category">
+        <option value="1">men category</option>
+        <option value="2">female category</option>
+        <option value="3">electronics</option>
+      </select>
+
+      <input type="file" name="product_image">
+    product name:<input type="text" name="pname" placeholder="Enter product name" required>
+    product price <input type="number" name="price" placeholder="Enter product price">
+    product discount <input type="number" name="discount" placeholder="Enter product discount">
+    description <textarea type="text" name="description" placeholder="Enter product description"></textarea>
+
+      <input type="submit">
+
+   </form>
+   
+   
+   </body>
+</html>

@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-esx&e3=^m3wi+)%3+pa!%da1l%j5@md9pgquj4orlgk+=-%#*s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -39,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'product',
     'contact',
+    'admin_panel',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'eshop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['templates','admin_panel/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
