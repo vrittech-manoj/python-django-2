@@ -60,7 +60,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link d-block" href="{% url 'admin_login' %}">
-                                Admin, <b>Logout</b>
+                               {{request.user.username}} , <b>Logout</b>
                             </a>
                         </li>
                     </ul>
